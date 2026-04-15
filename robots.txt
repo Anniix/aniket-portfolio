@@ -1,24 +1,60 @@
-# robots.txt for aniketdubey.in
-# Aniket Dubey — Full Stack Web Developer, Mumbai
+robots.txt for aniketdubey.in
 
-# Allow all search engine crawlers
+Aniket Dubey — Best Full Stack Web Developer in Mumbai
+
+Specialized in MERN Stack, React.js & PHP Solutions
+
+---------------------------------------------------------
+
+GLOBAL RULES
+
+---------------------------------------------------------
+
 User-agent: *
+
+Allow all content to be crawled for maximum visibility
+
 Allow: /
 
-# Sitemap location
-Sitemap: https://aniketdubey.in/sitemap.xml
+Ensure styles, scripts, and assets are accessible for mobile-friendliness checks
 
-# Crawl delay (optional - be nice to servers)
-Crawl-delay: 1
+Allow: /assets/
+Allow: /css/
+Allow: /js/
+Allow: /images/
 
-# Specific crawler rules
+---------------------------------------------------------
+
+SEARCH ENGINE SPECIFIC
+
+---------------------------------------------------------
+
+Googlebot - Priority 1
+
 User-agent: Googlebot
 Allow: /
-Crawl-delay: 0
 
-User-agent: Bingbot
+Bing & MSN
+
+User-agent: bingbot
 Allow: /
 Crawl-delay: 1
+
+Apple's search bot
+
+User-agent: Applebot
+Allow: /
+
+DuckDuckGo
+
+User-agent: DuckDuckBot
+Allow: /
+
+---------------------------------------------------------
+
+SOCIAL MEDIA & PREVIEW BOTS
+
+---------------------------------------------------------
 
 User-agent: Twitterbot
 Allow: /
@@ -29,7 +65,17 @@ Allow: /
 User-agent: LinkedInBot
 Allow: /
 
-# Block bad bots
+User-agent: Pinterest
+Allow: /
+
+---------------------------------------------------------
+
+BLOCK HARMFUL SCRAPERS & AGGRESSIVE SEO TOOLS
+
+Saving bandwidth and protecting your code from clones
+
+---------------------------------------------------------
+
 User-agent: AhrefsBot
 Disallow: /
 
@@ -38,3 +84,32 @@ Disallow: /
 
 User-agent: DotBot
 Disallow: /
+
+User-agent: Rogerbot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: SemrushBot-SA
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+User-agent: Barkrowler
+Disallow: /
+
+User-agent: ZoominfoBot
+Disallow: /
+
+User-agent: SeekportBot
+Disallow: /
+
+---------------------------------------------------------
+
+SITEMAP LOCATION
+
+---------------------------------------------------------
+
+Sitemap: https://aniketdubey.in/sitemap.xml
