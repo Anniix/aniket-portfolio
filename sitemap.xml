@@ -1,79 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
-  <!-- Homepage / Main Portfolio -->
+  <!-- Main Portfolio - Aniket Dubey -->
+  <!-- Is URL ki priority 1.0 hai kyunki ye aapka main branding page hai -->
   <url>
     <loc>https://aniketdubey.in/</loc>
-    <lastmod>2026-04-12</lastmod>
+    <lastmod>2026-04-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    
+    <!-- Image Sitemap: Ye Google ko aapki personal branding aur projects ki images index karne mein help karega -->
+    <image:image>
+      <image:loc>https://aniketdubey.in/og-image.jpeg</image:loc>
+      <image:title>Aniket Dubey - Full Stack Web Developer Mumbai</image:title>
+      <image:caption>Professional Portfolio of Aniket Dubey showcasing MERN Stack and PHP Projects</image:caption>
+    </image:image>
   </url>
 
-  <!-- About Section -->
-  <url>
-    <loc>https://aniketdubey.in/#about</loc>
-    <lastmod>2026-04-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- Services Section -->
-  <url>
-    <loc>https://aniketdubey.in/#services</loc>
-    <lastmod>2026-04-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- Projects / Work Section -->
-  <url>
-    <loc>https://aniketdubey.in/#projects</loc>
-    <lastmod>2026-04-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- KisanX Project -->
-  <url>
-    <loc>https://aniketdubey.in/#projects</loc>
-    <lastmod>2026-04-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Skills / Technical Expertise -->
-  <url>
-    <loc>https://aniketdubey.in/#skills</loc>
-    <lastmod>2026-04-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Experience Section -->
-  <url>
-    <loc>https://aniketdubey.in/#experience</loc>
-    <lastmod>2026-04-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- FAQ Section -->
-  <url>
-    <loc>https://aniketdubey.in/#faq</loc>
-    <lastmod>2026-04-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- Contact Section -->
-  <url>
-    <loc>https://aniketdubey.in/#contact</loc>
-    <lastmod>2026-04-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
+  <!-- Note: Fragment URLs (#about, #projects) sitemap mein optional hote hain 
+       lekin humne main URL ko images ke saath optimize kiya hai taaki 
+       'Aniket Dubey Mumbai' search karne par images aur site dono top par aayein. -->
 
 </urlset>
