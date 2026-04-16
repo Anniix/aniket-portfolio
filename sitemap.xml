@@ -17,7 +17,7 @@
     <image:image>
       <image:loc>https://aniketdubey.in/og-image.jpeg</image:loc>
       <image:title>Aniket Dubey - Full Stack Web Developer Mumbai</image:title>
-      <image:caption>Aniket Dubey | React.js, MERN Stack & PHP Expert | Founder of KisanX</image:caption>
+      <image:caption>Aniket Dubey | React.js, MERN Stack &amp; PHP Expert | Founder of KisanX</image:caption>
     </image:image>
   </url>
 
