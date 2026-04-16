@@ -1,82 +1,78 @@
-robots.txt for aniketdubey.in
+# ============================================================
+# robots.txt — aniketdubey.in
+# Aniket Dubey | Full Stack Web Developer Mumbai
+# Last Updated: 2026-04-16
+# ============================================================
 
-Aniket Dubey — Best Full Stack Web Developer in Mumbai
-
-Specialized in MERN Stack, React.js & PHP Solutions
-
----------------------------------------------------------
-
-GLOBAL RULES
-
----------------------------------------------------------
-
+# ---- Allow ALL major search engine crawlers ----
 User-agent: *
-
-Allow all content to be crawled for maximum visibility
-
 Allow: /
 
-Ensure styles, scripts, and assets are accessible for mobile-friendliness checks
-
-Allow: /assets/
-Allow: /css/
-Allow: /js/
-Allow: /images/
-
----------------------------------------------------------
-
-SEARCH ENGINE SPECIFIC
-
----------------------------------------------------------
-
-Googlebot - Priority 1
-
+# ---- Google Specific ----
 User-agent: Googlebot
-Allow: /
-
-Bing & MSN
-
-User-agent: bingbot
 Allow: /
 Crawl-delay: 1
 
-Apple's search bot
-
-User-agent: Applebot
+User-agent: Googlebot-Image
 Allow: /
 
-DuckDuckGo
+User-agent: Googlebot-Mobile
+Allow: /
 
+# ---- Bing / Microsoft ----
+User-agent: bingbot
+Allow: /
+Crawl-delay: 2
+
+User-agent: msnbot
+Allow: /
+
+# ---- DuckDuckGo ----
 User-agent: DuckDuckBot
 Allow: /
 
----------------------------------------------------------
+# ---- Yahoo ----
+User-agent: Slurp
+Allow: /
+Crawl-delay: 2
 
-SOCIAL MEDIA & PREVIEW BOTS
-
----------------------------------------------------------
-
-User-agent: Twitterbot
+# ---- Social Media Crawlers (for OG/Twitter previews) ----
+User-agent: facebookexternalhit
 Allow: /
 
-User-agent: facebookexternalhit
+User-agent: Twitterbot
 Allow: /
 
 User-agent: LinkedInBot
 Allow: /
 
-User-agent: Pinterest
+User-agent: WhatsApp
 Allow: /
 
----------------------------------------------------------
+# ---- AI / LLM Crawlers (for AI search visibility) ----
+User-agent: GPTBot
+Allow: /
 
-BLOCK HARMFUL SCRAPERS & AGGRESSIVE SEO TOOLS
+User-agent: ChatGPT-User
+Allow: /
 
-Saving bandwidth and protecting your code from clones
+User-agent: Google-Extended
+Allow: /
 
----------------------------------------------------------
+User-agent: PerplexityBot
+Allow: /
 
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+# ---- Block Bad / Spam Crawlers ----
 User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
 Disallow: /
 
 User-agent: MJ12bot
@@ -85,31 +81,25 @@ Disallow: /
 User-agent: DotBot
 Disallow: /
 
-User-agent: Rogerbot
-Disallow: /
-
-User-agent: SemrushBot
-Disallow: /
-
-User-agent: SemrushBot-SA
-Disallow: /
-
 User-agent: BLEXBot
 Disallow: /
 
-User-agent: Barkrowler
+User-agent: DataForSeoBot
 Disallow: /
 
-User-agent: ZoominfoBot
-Disallow: /
+# ---- Block Useless System Paths ----
+User-agent: *
+Disallow: /cgi-bin/
+Disallow: /wp-admin/
+Disallow: /wp-login.php
+Disallow: /*.php$
+Disallow: /node_modules/
+Disallow: /.git/
+Disallow: /tmp/
+Disallow: /logs/
 
-User-agent: SeekportBot
-Disallow: /
-
----------------------------------------------------------
-
-SITEMAP LOCATION
-
----------------------------------------------------------
-
+# ---- Sitemap Location (Critical for Google!) ----
 Sitemap: https://aniketdubey.in/sitemap.xml
+
+# ---- Host Declaration ----
+Host: https://aniketdubey.in
