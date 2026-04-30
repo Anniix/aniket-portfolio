@@ -759,6 +759,31 @@
             #hero-chips span { animation: none; }
             .orb { display: none; }
         }
+
+        /* ===================== MOBILE PERFORMANCE FIXES ===================== */
+        /* Mobile pe particle canvas hide — main CPU drain yahi tha */
+        @media (max-width: 768px) {
+            #particle-canvas { display: none; }
+            .orb { display: none; }
+        }
+        /* Mobile pe backdrop-filter costly hai — simplify */
+        @media (max-width: 768px) {
+            header {
+                backdrop-filter: none;
+                -webkit-backdrop-filter: none;
+                background: var(--bg-color);
+                border-bottom: 1px solid var(--border-color);
+            }
+        }
+        /* Mobile pe hover transitions remove karo — scroll jankiness fix */
+        @media (max-width: 768px) {
+            .service-card, .project-card, .skill-cat {
+                transition: none;
+            }
+            .service-card::before, .project-card::before, .skill-cat::before {
+                display: none;
+            }
+        }
     </style>
 </head>
 <body data-theme="light">
@@ -1198,19 +1223,26 @@
         }
         window.addEventListener('load', initGSAP);
 
-        // Active Nav Spy
+        // Active Nav Spy — passive scroll listener for mobile performance
         const sections = document.querySelectorAll('section');
         const navLinks = document.querySelectorAll('nav ul li a');
+        let scrollTicking = false;
         window.addEventListener('scroll', () => {
-            let current = '';
-            sections.forEach(section => {
-                if (pageYOffset >= section.offsetTop - 150) current = section.getAttribute('id');
-            });
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href').includes(current)) link.classList.add('active');
-            });
-        });
+            if (!scrollTicking) {
+                requestAnimationFrame(() => {
+                    let current = '';
+                    sections.forEach(section => {
+                        if (pageYOffset >= section.offsetTop - 150) current = section.getAttribute('id');
+                    });
+                    navLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href').includes(current)) link.classList.add('active');
+                    });
+                    scrollTicking = false;
+                });
+                scrollTicking = true;
+            }
+        }, { passive: true });
 
         // Stats Count-Up
         function animateCountUp(el, target, suffix, duration) {
@@ -1254,23 +1286,31 @@
             obs.observe(title);
         });
 
-        // === PARTICLE CANVAS — fewer particles on mobile ===
+        // === PARTICLE CANVAS — desktop only, mobile pe skip ===
         (function() {
+            const isMobile = window.innerWidth <= 768;
+            if (isMobile) return; // Mobile pe particle canvas bilkul nahi chalega
+
             const canvas = document.getElementById('particle-canvas');
             if (!canvas) return;
             const ctx = canvas.getContext('2d');
             let W, H, particles = [];
+            let animationId = null;
+            let isVisible = true;
 
             function resize() { W = canvas.width = window.innerWidth; H = canvas.height = window.innerHeight; }
             resize();
-            window.addEventListener('resize', resize);
+            window.addEventListener('resize', resize, { passive: true });
+
+            // Tab hidden hone pe animation pause karo — battery save
+            document.addEventListener('visibilitychange', () => {
+                isVisible = !document.hidden;
+                if (isVisible && animationId === null) drawParticles();
+            });
 
             function isDark() { return document.body.getAttribute('data-theme') === 'dark'; }
 
-            // Reduce particle count on mobile for better performance
-            const isMobile = window.innerWidth <= 768;
-            const count = isMobile ? 20 : 55;
-
+            const count = 55;
             for (let i = 0; i < count; i++) {
                 particles.push({
                     x: Math.random() * window.innerWidth,
@@ -1282,8 +1322,9 @@
                 });
             }
 
-            // On mobile skip line drawing for better performance
             function drawParticles() {
+                if (!isVisible) { animationId = null; return; }
+                animationId = requestAnimationFrame(drawParticles);
                 ctx.clearRect(0, 0, W, H);
                 const dark = isDark();
                 particles.forEach(p => {
@@ -1296,25 +1337,22 @@
                     if (p.y < 0) p.y = H; if (p.y > H) p.y = 0;
                 });
 
-                if (!isMobile) {
-                    for (let i = 0; i < particles.length; i++) {
-                        for (let j = i + 1; j < particles.length; j++) {
-                            const dx = particles[i].x - particles[j].x;
-                            const dy = particles[i].y - particles[j].y;
-                            const dist = Math.sqrt(dx*dx + dy*dy);
-                            if (dist < 120) {
-                                const alpha = (1 - dist / 120) * (dark ? 0.18 : 0.07);
-                                ctx.beginPath();
-                                ctx.strokeStyle = dark ? `rgba(99,179,237,${alpha})` : `rgba(59,130,246,${alpha})`;
-                                ctx.lineWidth = 0.6;
-                                ctx.moveTo(particles[i].x, particles[i].y);
-                                ctx.lineTo(particles[j].x, particles[j].y);
-                                ctx.stroke();
-                            }
+                for (let i = 0; i < particles.length; i++) {
+                    for (let j = i + 1; j < particles.length; j++) {
+                        const dx = particles[i].x - particles[j].x;
+                        const dy = particles[i].y - particles[j].y;
+                        const dist = Math.sqrt(dx*dx + dy*dy);
+                        if (dist < 120) {
+                            const alpha = (1 - dist / 120) * (dark ? 0.18 : 0.07);
+                            ctx.beginPath();
+                            ctx.strokeStyle = dark ? `rgba(99,179,237,${alpha})` : `rgba(59,130,246,${alpha})`;
+                            ctx.lineWidth = 0.6;
+                            ctx.moveTo(particles[i].x, particles[i].y);
+                            ctx.lineTo(particles[j].x, particles[j].y);
+                            ctx.stroke();
                         }
                     }
                 }
-                requestAnimationFrame(drawParticles);
             }
             drawParticles();
         })();
