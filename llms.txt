@@ -33,6 +33,8 @@ Primary technical skills: HTML5, CSS3, JavaScript, React, Firebase, PHP, MySQL, 
  Website: https://aniketdubey.in
  GitHub: [@Anniix](https://github.com/Anniix)
  LinkedIn: [aniket-dubey-dev](https://www.linkedin.com/in/aniket-dubey-dev/)
+ Location: Virar, Mumbai Metropolitan Region, Maharashtra, India
+ [Contact page](https://www.aniketdubey.in/contact/)
 
 ## Optional
 
