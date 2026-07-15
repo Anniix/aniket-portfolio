@@ -1,0 +1,43 @@
+# Aniket Dubey
+
+> Full Stack Web Developer from Mumbai, India, specializing in responsive websites, web applications, and modern JavaScript frameworks. Builds with React, Firebase, PHP, MySQL, and WordPress.
+
+Aniket Dubey is a Full Stack Web Developer based in Mumbai, India. He builds responsive websites, web applications, and full stack solutions using React, Firebase, PHP, MySQL, JavaScript, HTML, CSS, and WordPress. He offers services including portfolio websites, business websites, landing pages, full stack web development, website redesigns, and WordPress development.
+
+## About
+
+[About Aniket Dubey](https://aniketdubey.in/about): Full Stack Web Developer profile, background, and specialization in responsive web development.
+
+## Skills
+
+Primary technical skills: HTML5, CSS3, JavaScript, React, Firebase, PHP, MySQL, WordPress, Git, GitHub.
+
+## Services
+
+ [Portfolio Websites](https://aniketdubey.in/services): Custom personal and professional portfolio website development.
+ [Business Websites](https://aniketdubey.in/services): Full business website design and development.
+ [Landing Pages](https://aniketdubey.in/services): High-conversion landing page design and development.
+ [Full Stack Web Development](https://aniketdubey.in/services): End-to-end web application development using React, Firebase, PHP, and MySQL.
+ [Website Redesign](https://aniketdubey.in/services): Modernization and redesign of existing websites.
+ [WordPress Development](https://aniketdubey.in/services): Custom WordPress themes, plugins, and site builds.
+
+## Projects
+
+ [KisanX](https://aniketdubey.in/projects): Web application project by Aniket Dubey.
+ [Personal Portfolio](https://aniketdubey.in): Official portfolio website showcasing skills, services, and projects.
+ [Web Applications](https://aniketdubey.in/projects): Collection of full stack web application projects.
+
+## Contact
+
+ Email: ad5568615@gmail.com
+ Website: https://aniketdubey.in
+ GitHub: [@Anniix](https://github.com/Anniix)
+ LinkedIn: [aniket-dubey-dev](https://www.linkedin.com/in/aniket-dubey-dev/)
+
+## Optional
+
+ [GitHub Profile](https://github.com/Anniix): Source code repositories and open source contributions.
+ [LinkedIn Profile](https://www.linkedin.com/in/aniket-dubey-dev/): Professional profile and work history.
+
+
+All original content on this site belongs to Aniket Dubey. Last updated: 2026.
