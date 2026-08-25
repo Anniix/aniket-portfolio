@@ -24,9 +24,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" as="image" href="/og-image.jpeg" fetchpriority="high">
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Inter:wght@400;600&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Inter:wght@400;600&display=swap" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Inter:wght@400;600&display=swap"></noscript>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;650;700;800&family=Inter:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;650;700;800&family=Inter:wght@400;500;600&display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;650;700;800&family=Inter:wght@400;500;600&display=swap"></noscript>
 
     <meta name="theme-color" content="#000000">
     <meta name="mobile-web-app-capable" content="yes">
@@ -350,6 +350,7 @@
 
         body{
             font-family:'Inter',system-ui,-apple-system,sans-serif;
+            font-weight:400;
             line-height:1.6;
             color:var(--text-light);
             background-color:var(--bg-color);
@@ -358,7 +359,10 @@
             background-image:radial-gradient(var(--border-color) 1px,transparent 1px);
             background-size:30px 30px;
         }
-        h1,h2,h3,h4{font-family:'Plus Jakarta Sans',system-ui,-apple-system,sans-serif;color:var(--text-main)}
+        h1,h2,h3,h4{font-family:'Sora',system-ui,-apple-system,sans-serif;font-weight:700;color:var(--text-main)}
+        h1{font-weight:800}
+        .section-title{font-family:'Sora',system-ui,-apple-system,sans-serif;font-weight:650}
+        .btn{font-family:'Inter',system-ui,-apple-system,sans-serif;font-weight:600}
         .container{max-width:1100px;margin:0 auto;padding:0 24px}
 
         header{
@@ -386,9 +390,9 @@
             color:var(--bg-color);font-weight:900;font-size:16px;transition:.4s;
         }
         .logo:hover .logo-mark{transform:rotate(360deg) scale(1.15);background:var(--accent);clip-path:polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%)}
-        .logo:hover .logo-mark::before{content:'AD';transform:rotate(-360deg);font-family:'Plus Jakarta Sans',sans-serif;letter-spacing:-1px}
+        .logo:hover .logo-mark::before{content:'AD';transform:rotate(-360deg);font-family:'Sora',sans-serif;letter-spacing:-1px}
         .logo-text{display:flex;flex-direction:column;line-height:1.1}
-        .logo-name{font-size:18px;font-weight:800;color:var(--text-main);letter-spacing:-.5px}
+        .logo-name{font-family:'Sora',system-ui,-apple-system,sans-serif;font-size:18px;font-weight:700;color:var(--text-main);letter-spacing:-.5px}
         nav ul{list-style:none;display:flex;gap:30px;align-items:center}
         nav a{
             text-decoration:none;color:var(--text-light);font-size:14px;
@@ -417,7 +421,7 @@
             display:inline-flex;align-items:center;gap:10px;
             background:var(--badge-bg);color:var(--badge-text);
             padding:8px 18px;border-radius:100px;margin-bottom:24px;
-            font-size:14px;font-weight:600;font-family:'Plus Jakarta Sans',sans-serif;
+            font-size:14px;font-weight:600;font-family:'Sora',sans-serif;
             transform:scale(0);
         }
         .badge-dot{width:7px;height:7px;background:#4ade80;border-radius:50%;animation:pulse-dot 2s infinite}
@@ -443,7 +447,7 @@
             border-top:1px solid var(--border-color);flex-wrap:wrap;
         }
         .stat-item{display:flex;flex-direction:column}
-        .stat-num{font-size:28px;font-weight:800;color:var(--text-main);font-family:'Plus Jakarta Sans',sans-serif}
+        .stat-num{font-size:28px;font-weight:800;color:var(--text-main);font-family:'Sora',sans-serif}
         .stat-label{font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:var(--text-light)}
 
         @keyframes gradientShift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
@@ -538,7 +542,7 @@
         .kisanx-stat:last-child{border-right:none}
         .kisanx-stat::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,transparent,rgba(59,130,246,.04));opacity:0;transition:opacity .3s}
         .kisanx-card:hover .kisanx-stat::before{opacity:1}
-        .ks-num{font-size:22px;font-weight:800;color:var(--text-main);font-family:'Plus Jakarta Sans',sans-serif;display:block}
+        .ks-num{font-size:22px;font-weight:800;color:var(--text-main);font-family:'Sora',sans-serif;display:block}
         .ks-label{font-size:11px;color:var(--text-light);text-transform:uppercase;letter-spacing:.08em;font-weight:600}
         .kisanx-body{padding:28px 40px 32px}
         .kisanx-desc{font-size:15px;color:var(--text-light);margin-bottom:20px;line-height:1.7}
@@ -597,7 +601,7 @@
         .proj-stat:last-child{border-right:none}
         .proj-stat::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,transparent,rgba(59,130,246,.04));opacity:0;transition:opacity .3s}
         .proj-card:hover .proj-stat::before{opacity:1}
-        .ps-num{font-size:17px;font-weight:800;color:var(--text-main);font-family:'Plus Jakarta Sans',sans-serif;display:block}
+        .ps-num{font-size:17px;font-weight:800;color:var(--text-main);font-family:'Sora',sans-serif;display:block}
         .ps-label{font-size:10px;color:var(--text-light);text-transform:uppercase;letter-spacing:.06em;font-weight:600}
 
         .proj-body{padding:22px 32px 26px}
@@ -671,7 +675,7 @@
         .skill-tag:hover{border-color:var(--accent);background:var(--bg-color);transform:scale(1.15) rotate(2deg)}
 
         footer{padding:80px 0 40px;background:#000000;color:#ffffff;text-align:center}
-        .footer-logo{font-size:24px;font-weight:800;margin-bottom:15px;display:block;color:#fff}
+        .footer-logo{font-family:'Sora',sans-serif;font-size:24px;font-weight:800;margin-bottom:15px;display:block;color:#fff}
         .social-links{display:flex;justify-content:center;gap:25px;margin:30px 0}
         .social-link{color:#a1a1aa;font-size:22px;transition:var(--transition)}
         .social-link:hover{color:#fff;transform:translateY(-3px)}
@@ -727,6 +731,23 @@
         #particle-canvas{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0;opacity:.45}
         [data-theme="dark"] #particle-canvas{opacity:.6}
 
+        /* ---- Theme Arc Wipe Overlay (top-right origin) ---- */
+        #theme-wipe{
+            position:fixed;top:0;left:0;width:100%;height:100%;
+            z-index:9999;pointer-events:none;
+            clip-path:circle(0% at 100% 0%);
+            -webkit-clip-path:circle(0% at 100% 0%);
+            transition:clip-path .48s cubic-bezier(.65,0,.35,1);
+            -webkit-transition:-webkit-clip-path .48s cubic-bezier(.65,0,.35,1);
+            box-shadow:0 15px 40px -5px rgba(59,130,246,.35);
+        }
+        #theme-wipe.wipe-to-dark{background:#09090b}
+        #theme-wipe.wipe-to-light{background:#ffffff}
+        #theme-wipe.wipe-active{
+            clip-path:circle(150% at 100% 0%);
+            -webkit-clip-path:circle(150% at 100% 0%);
+        }
+
         @media(max-width:768px){
             .hero h1{font-size:42px}
             .hamburger{display:flex}
@@ -763,9 +784,35 @@
         @media(prefers-reduced-motion:reduce){
             *{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
         }
+
+        /* ---- FAQ Accordion ---- */
+        .faq-card .proj-body{padding:0;cursor:pointer}
+        .faq-question{
+            display:flex;align-items:center;justify-content:space-between;gap:16px;
+            padding:22px 26px;font-size:16px;font-weight:700;color:var(--text-main);
+            font-family:'Sora',system-ui,-apple-system,sans-serif;
+            user-select:none;
+        }
+        .faq-toggle-icon{
+            flex-shrink:0;width:26px;height:26px;border-radius:50%;
+            border:1px solid var(--border-color);background:var(--surface-color);
+            display:flex;align-items:center;justify-content:center;
+            font-size:15px;font-weight:700;color:var(--accent);line-height:1;
+            transition:transform .35s cubic-bezier(.4,0,.2,1),background .3s ease,border-color .3s ease;
+        }
+        .faq-card.faq-open .faq-toggle-icon{transform:rotate(180deg);border-color:var(--accent);background:rgba(59,130,246,.1)}
+        .faq-answer-wrap{
+            max-height:0;overflow:hidden;
+            transition:max-height .4s cubic-bezier(.4,0,.2,1);
+        }
+        .faq-card.faq-open .faq-answer-wrap{max-height:400px}
+        .faq-answer{padding:0 26px 24px;font-size:14px;color:var(--text-light);line-height:1.7}
+        .faq-card:hover .faq-toggle-icon{border-color:var(--accent)}
     </style>
 </head>
 <body data-theme="light">
+
+    <div id="theme-wipe" aria-hidden="true"></div>
 
     <div class="orb orb-1"></div>
     <div class="orb orb-2"></div>
@@ -832,7 +879,10 @@
                     <span class="who-chip">&#127807; KisanX Founder</span>
                 </div>
 
-                <h1 id="hero-title">Turning Ideas Into<br><span class="hero-gradient-text">Revenue-Generating Products.</span></h1>
+                <h1 id="hero-title">
+                   Ideas Deserve More<br>
+                    <span class="hero-gradient-text">Than Just Code</span>
+                </h1>
                 <p id="hero-desc">I'm <strong>Aniket Dubey</strong>, a <strong>freelance web developer in Mumbai</strong> building real-world solutions that matter. Founder of <strong>KisanX</strong>, a D2C farmer marketplace. As a <strong>full stack developer Mumbai</strong> and <strong>MERN Stack developer Mumbai</strong>, I specialize in <strong>React.js</strong> and <strong>PHP</strong> — helping startups launch fast and scale smart.</p>
 
                 <div style="margin-top:30px" id="hero-btns">
@@ -1047,54 +1097,64 @@
             <!-- Other Project Cards — KisanX style -->
             <div class="project-grid">
 
-                <!-- The Capital -->
-                <div class="proj-card reveal">
-                    <div class="proj-header">
-                        <div class="proj-badge-row">
-                            <span class="proj-badge kb-live">&#9679; Live</span>
-                            <span class="proj-badge kb-client">&#127968; Real Estate</span>
-                            <span class="proj-badge kb-year">2026</span>
-                        </div>
-                        <div class="proj-title-row">
-                            <div>
-                                <div class="proj-title">The Capital</div>
-                                <div class="proj-tagline">Property Listing Platform &middot; Modern Design</div>
-                            </div>
-                            <div class="proj-emoji" aria-hidden="true">&#127963;</div>
-                        </div>
-                    </div>
-                    <div class="proj-stats">
-                        <div class="proj-stat">
-                            <span class="ps-num">100%</span>
-                            <span class="ps-label">Responsive</span>
-                        </div>
-                        <div class="proj-stat">
-                            <span class="ps-num">&#9889;</span>
-                            <span class="ps-label">Fast Load</span>
-                        </div>
-                        <div class="proj-stat">
-                            <span class="ps-num">3</span>
-                            <span class="ps-label">Tech Used</span>
-                        </div>
-                    </div>
-                    <div class="proj-body">
-                        <p class="proj-desc">A responsive real estate property listing platform showcasing modern web design and user experience. Built for seamless browsing.</p>
-                        <div class="proj-tech">
-                            <span class="kts">HTML5</span>
-                            <span class="kts">CSS3</span>
-                            <span class="kts">JavaScript</span>
-                        </div>
-                        <div class="proj-actions">
-                            <a href="https://anniix.github.io/capital-home/" target="_blank" rel="noopener" class="proj-action-primary">
-                                <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> View Live
-                            </a>
-                            <a href="https://github.com/Anniix/capital-home" target="_blank" rel="noopener" class="proj-action-secondary">
-                                <i class="fa-brands fa-github" aria-hidden="true"></i> GitHub
-                            </a>
-                        </div>
-                    </div>
-                </div>
+               <!-- Nidhi Pharmaceutical -->
+<div class="proj-card reveal">
+    <div class="proj-header">
+        <div class="proj-badge-row">
+            <span class="proj-badge kb-live">&#9679; Live</span>
+            <span class="proj-badge kb-client">&#128138; Pharmaceutical</span>
+            <span class="proj-badge kb-year">2026</span>
+        </div>
 
+        <div class="proj-title-row">
+            <div>
+                <div class="proj-title">Nidhi Pharmaceutical</div>
+                <div class="proj-tagline">Pharmaceutical Website &middot; Professional Design</div>
+            </div>
+            <div class="proj-emoji" aria-hidden="true">&#128138;</div>
+        </div>
+    </div>
+
+    <div class="proj-stats">
+        <div class="proj-stat">
+            <span class="ps-num">100%</span>
+            <span class="ps-label">Responsive</span>
+        </div>
+        <div class="proj-stat">
+            <span class="ps-num">&#9889;</span>
+            <span class="ps-label">Fast Load</span>
+        </div>
+        <div class="proj-stat">
+            <span class="ps-num">3</span>
+            <span class="ps-label">Tech Used</span>
+        </div>
+    </div>
+
+    <div class="proj-body">
+        <p class="proj-desc">
+            A modern and responsive pharmaceutical website designed to present
+            Nidhi Pharmaceutical's products, services, and company information
+            with a clean and professional user experience.
+        </p>
+
+        <div class="proj-tech">
+            <span class="kts">HTML5</span>
+             <span class="kts">CCS3</span>
+            <span class="kts">BOOTSTRAP</span>
+            <span class="kts">JavaScript</span>
+        </div>
+
+        <div class="proj-actions">
+            <a href="https://nidhipharmaceutical.com/" target="_blank" rel="noopener" class="proj-action-primary">
+                <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> View Live
+            </a>
+
+           <a href="https://github.com/Anniix/" target="_blank" rel="noopener" class="proj-action-secondary">
+                <i class="fa-brands fa-github" aria-hidden="true"></i> GitHub
+            </a>
+        </div>
+    </div>
+</div>
                 <!-- Vastu Properties -->
                 <div class="proj-card reveal">
                     <div class="proj-header">
@@ -1291,7 +1351,7 @@
                         <span class="kts">MongoDB</span>
                     </div>
 
-                   <div style="text-align;margin-top:50px;">
+                <div style="text-align: center; margin-top: 50px;">
                         <a href="https://www.linkedin.com/posts/aniket-dubey-dev_webdevelopment-fullstackdeveloper-mernstack-activity-7471639914464423936-Nn-j?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE8N96sBmephPC4-mD-uknBvWpxiPM3S32M">
                             Read Article →
                         </a>
@@ -1336,7 +1396,7 @@
                         <span class="kts">LLM</span>
                     </div>
 
-                   <div style="text-align;margin-top:50px;">
+                  <div style="text-align: center; margin-top: 50px;">
                         <a href="https://dev.to/aniket_dev/i-tried-making-passive-income-with-a-website-heres-the-brutal-truth-416d">
                             Read Article →
                         </a>
@@ -1382,7 +1442,7 @@
                     </div>
 
                     
-                       <div style="text-align;margin-top:50px;">
+                      <div style="text-align: center; margin-top: 50px;">
                         <a href="https://dev.to/aniket_dev/i-built-a-developer-portfolio-that-actually-gets-leads-not-just-views-42ha">
                             Read Article →
                         </a>
@@ -1406,28 +1466,48 @@
         <div class="container">
             <h2 class="section-title reveal">Frequently Asked Questions</h2>
             <div class="project-grid">
-                <div class="proj-card reveal" style="border-radius:12px">
-                    <div class="proj-body" style="padding:28px">
-                        <h3 style="margin-bottom:12px;font-size:17px">Why should I hire Aniket Dubey for web projects?</h3>
-                        <p class="proj-desc" style="margin-bottom:0">Aniket Dubey combines technical excellence with business development experience. He doesn't just build websites; he builds high-performance digital solutions designed to drive ROI and scalability.</p>
+                <div class="proj-card faq-card reveal" style="border-radius:12px">
+                    <div class="proj-body" onclick="toggleFaq(this)">
+                        <div class="faq-question">
+                            <span>Why should I hire Aniket Dubey for web projects?</span>
+                            <span class="faq-toggle-icon" aria-hidden="true">+</span>
+                        </div>
+                        <div class="faq-answer-wrap">
+                            <p class="faq-answer">Aniket Dubey combines technical excellence with business development experience. He doesn't just build websites; he builds high-performance digital solutions designed to drive ROI and scalability.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="proj-card reveal" style="border-radius:12px">
-                    <div class="proj-body" style="padding:28px">
-                        <h3 style="margin-bottom:12px;font-size:17px">What technologies does Aniket Dubey specialize in?</h3>
-                        <p class="proj-desc" style="margin-bottom:0">My primary expertise is in Web development (HTML, HTML5, Javascript, CSS, React.js, UI/UX Design) and PHP/MySQL development. I focus on modern architectures, responsive UI/UX, and search engine optimization.</p>
+                <div class="proj-card faq-card reveal" style="border-radius:12px">
+                    <div class="proj-body" onclick="toggleFaq(this)">
+                        <div class="faq-question">
+                            <span>What technologies does Aniket Dubey specialize in?</span>
+                            <span class="faq-toggle-icon" aria-hidden="true">+</span>
+                        </div>
+                        <div class="faq-answer-wrap">
+                            <p class="faq-answer">My primary expertise is in Web development (HTML, HTML5, Javascript, CSS, React.js, UI/UX Design) and PHP/MySQL development. I focus on modern architectures, responsive UI/UX, and search engine optimization.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="proj-card reveal" style="border-radius:12px">
-                    <div class="proj-body" style="padding:28px">
-                        <h3 style="margin-bottom:12px;font-size:17px">Are you available for international freelance projects?</h3>
-                        <p class="proj-desc" style="margin-bottom:0">Yes, I am open to selective freelance projects and remote opportunities globally. Based in Mumbai, India, I have handled end-to-end development for various startups and business models.</p>
+                <div class="proj-card faq-card reveal" style="border-radius:12px">
+                    <div class="proj-body" onclick="toggleFaq(this)">
+                        <div class="faq-question">
+                            <span>Are you available for international freelance projects?</span>
+                            <span class="faq-toggle-icon" aria-hidden="true">+</span>
+                        </div>
+                        <div class="faq-answer-wrap">
+                            <p class="faq-answer">Yes, I am open to selective freelance projects and remote opportunities globally. Based in Mumbai, India, I have handled end-to-end development for various startups and business models.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="proj-card reveal" style="border-radius:12px">
-                    <div class="proj-body" style="padding:28px">
-                        <h3 style="margin-bottom:12px;font-size:17px">How can I contact Aniket Dubey for business?</h3>
-                        <p class="proj-desc" style="margin-bottom:0">You can reach me directly via email at <a href="mailto:ad5568615@gmail.com" style="color:var(--text-light);text-decoration:none">ad5568615@gmail.com</a> or through WhatsApp at +91-9067547562. I am available for consultations regarding custom web applications and business scaling.</p>
+                <div class="proj-card faq-card reveal" style="border-radius:12px">
+                    <div class="proj-body" onclick="toggleFaq(this)">
+                        <div class="faq-question">
+                            <span>How can I contact Aniket Dubey for business?</span>
+                            <span class="faq-toggle-icon" aria-hidden="true">+</span>
+                        </div>
+                        <div class="faq-answer-wrap">
+                            <p class="faq-answer">You can reach me directly via email at <a href="mailto:ad5568615@gmail.com" style="color:var(--accent);text-decoration:none" onclick="event.stopPropagation()">ad5568615@gmail.com</a> or through WhatsApp at +91-9067547562. I am available for consultations regarding custom web applications and business scaling.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1641,18 +1721,54 @@
     </script>
 
     <script>
-    // ---- Theme Toggle ----
+    // ---- Theme Toggle (Top-Right Arc Wipe Transition) ----
     var themeBtn=document.getElementById('theme-toggle');
     var body=document.body;
+    var themeWipe=document.getElementById('theme-wipe');
+    var wipeInProgress=false;
+
     themeBtn.addEventListener('click',function(){
+        if(wipeInProgress)return;
+        wipeInProgress=true;
+
         var icon=themeBtn.querySelector('i');
-        if(body.getAttribute('data-theme')==='light'){
-            body.setAttribute('data-theme','dark');
-            if(icon)icon.className='fa-solid fa-sun';
-        } else {
-            body.setAttribute('data-theme','light');
-            if(icon)icon.className='fa-solid fa-moon';
+        var goingDark=body.getAttribute('data-theme')==='light';
+
+        // Prep overlay: colour = the theme we're transitioning INTO
+        themeWipe.classList.remove('wipe-to-dark','wipe-to-light','wipe-active');
+        void themeWipe.offsetHeight; // reflow reset
+        themeWipe.classList.add(goingDark?'wipe-to-dark':'wipe-to-light');
+
+        // Rotate icon as the wipe begins
+        if(icon){
+            icon.style.transition='transform .5s cubic-bezier(.34,1.56,.64,1)';
+            icon.style.transform='rotate(180deg)';
         }
+
+        // Start the arc expanding from the top-right corner to cover the screen
+        requestAnimationFrame(function(){
+            themeWipe.classList.add('wipe-active');
+        });
+
+        // Swap the actual theme once the screen is fully covered (mid-wipe), then let it retract to reveal
+        setTimeout(function(){
+            if(goingDark){
+                body.setAttribute('data-theme','dark');
+                if(icon)icon.className='fa-solid fa-sun';
+            } else {
+                body.setAttribute('data-theme','light');
+                if(icon)icon.className='fa-solid fa-moon';
+            }
+            if(icon)icon.style.transform='rotate(0deg)';
+
+            // Retract the overlay back toward the top-right corner, revealing the new theme
+            themeWipe.classList.remove('wipe-active');
+
+            setTimeout(function(){
+                themeWipe.classList.remove('wipe-to-dark','wipe-to-light');
+                wipeInProgress=false;
+            },480);
+        },480);
     });
 
     // ---- Hamburger ----
@@ -1690,6 +1806,23 @@
         cmdOpen=false;cmdMenu.classList.remove('cmd-open');
         var sp=cmdTrigger.querySelector('span');
         if(sp)sp.innerHTML='&#9783;';
+    }
+
+    // ---- FAQ Accordion ----
+    function toggleFaq(bodyEl){
+        var card=bodyEl.closest('.faq-card');
+        if(!card)return;
+        var wasOpen=card.classList.contains('faq-open');
+        document.querySelectorAll('.faq-card.faq-open').forEach(function(openCard){
+            if(openCard!==card){
+                openCard.classList.remove('faq-open');
+                var oIcon=openCard.querySelector('.faq-toggle-icon');
+                if(oIcon)oIcon.textContent='+';
+            }
+        });
+        card.classList.toggle('faq-open',!wasOpen);
+        var icon=card.querySelector('.faq-toggle-icon');
+        if(icon)icon.textContent=wasOpen?'+':'\u2212';
     }
 
     // ---- Reveal on scroll ----
@@ -1819,17 +1952,22 @@
 
     // ---- Hero H1 char animation ----
     (function(){
-        var h1=document.getElementById('hero-title');
-        if(!h1)return;
-        var line1='Turning Ideas Into';
-        var html='';
-        line1.split('').forEach(function(ch,i){
-            if(ch===' '){html+=' ';}
-            else{html+='<span class="char-wrap"><span class="char" style="animation-delay:'+(i*.035)+'s">'+ch+'</span></span>';}
-        });
-        h1.innerHTML=html+'<br><span class="hero-gradient-text">Revenue-Generating Products.</span>';
-    })();
+    var h1 = document.getElementById('hero-title');
+    if(!h1) return;
 
+    var line1 = 'Ideas Deserve More';
+    var html = '';
+
+    line1.split('').forEach(function(ch, i){
+        if(ch === ' '){
+            html += ' ';
+        } else {
+            html += '<span class="char-wrap"><span class="char" style="animation-delay:' + (i * .035) + 's">' + ch + '</span></span>';
+        }
+    });
+
+    h1.innerHTML = html + '<br><span class="hero-gradient-text">Than Just Code.</span>';
+})();
     // ---- 3D Tilt (desktop only) ----
     if(!('ontouchstart' in window)){
         document.querySelectorAll('.service-card,.proj-card,.skill-cat').forEach(function(card){
