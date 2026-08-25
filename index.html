@@ -458,9 +458,36 @@
             animation:gradientShift 5s ease infinite;
         }
 
-        .char-wrap{display:inline-block;overflow:hidden;vertical-align:bottom}
+        .char-wrap{
+            display:inline-block;
+            overflow:hidden;
+            vertical-align:bottom;
+        }
+
+        .word-wrap{
+            display:inline-block;
+            white-space:nowrap;
+        }
+
+        .char{
+             display:inline-block;
+             animation:charSlideIn .7s cubic-bezier(.22,1,.36,1) both;
+        }
         .char{display:inline-block;animation:charSlideIn .7s cubic-bezier(.22,1,.36,1) both}
         @keyframes charSlideIn{from{transform:translateY(110%);opacity:0}to{transform:translateY(0);opacity:1}}
+        @media (max-width: 600px){
+
+    .hero h1{
+        font-size:clamp(38px, 10vw, 52px);
+        line-height:1.05;
+        letter-spacing:-1.8px;
+    }
+
+    .word-wrap{
+        white-space:nowrap;
+    }
+
+}
 
         .reveal{opacity:0;transform:translateY(40px);transition:opacity .8s ease,transform .8s ease}
         .reveal.active{opacity:1;transform:translateY(0)}
@@ -1958,15 +1985,32 @@
     var line1 = 'Ideas Deserve More';
     var html = '';
 
-    line1.split('').forEach(function(ch, i){
-        if(ch === ' '){
+    line1.split(' ').forEach(function(word, wordIndex){
+
+        html += '<span class="word-wrap">';
+
+        word.split('').forEach(function(ch, charIndex){
+
+            var delay = ((wordIndex * 5 + charIndex) * 0.035);
+
+            html += '<span class="char-wrap">' +
+                    '<span class="char" style="animation-delay:' + delay + 's">' +
+                    ch +
+                    '</span>' +
+                    '</span>';
+        });
+
+        html += '</span>';
+
+        if(wordIndex < line1.split(' ').length - 1){
             html += ' ';
-        } else {
-            html += '<span class="char-wrap"><span class="char" style="animation-delay:' + (i * .035) + 's">' + ch + '</span></span>';
         }
     });
 
-    h1.innerHTML = html + '<br><span class="hero-gradient-text">Than Just Code.</span>';
+    h1.innerHTML =
+        html +
+        '<br>' +
+        '<span class="hero-gradient-text">Than Just Code.</span>';
 })();
     // ---- 3D Tilt (desktop only) ----
     if(!('ontouchstart' in window)){
